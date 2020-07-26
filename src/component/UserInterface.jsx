@@ -34,6 +34,11 @@ class UserInterface extends React.Component {
 
       if (this.state.feature_id !== null) {
          try {
+            //User feedback when pressing button
+               document.querySelector('.bg-modal').style.display = 'flex';
+               document.querySelector('.close').addEventListener('click', function(){
+                  document.querySelector('.bg-modal').style.display = 'none';
+               });
             var time = new Date();
             var id_to_delete = this.state.feature_id;
 
